@@ -1,9 +1,23 @@
-# Project Lethe: Machine Unlearning Dependencies
+# Project Lethe - dependencies
+#
+# Only what the code actually imports. Keeping this minimal matters: the
+# README quick start tells users to `pip install -r requirements.txt`, and
+# every extra heavy package here is a way to break that install.
+#
+# Verified by: python smoke_test.py   (offline pipeline test, exit 0)
+
 torch>=2.0.0
 transformers>=4.35.0
-datasets>=2.14.0
-einops>=0.7.0
-numpy>=1.24.0
-scipy>=1.10.0
-lm-eval>=0.4.0
-accelerate>=0.25.0
+
+# ---------------------------------------------------------------------------
+# Optional / roadmap - NOT required to run the pipeline today.
+# Install individually if you want them:
+#
+#   lm-eval       -> standardized collateral-damage benchmarks (see Roadmap)
+#   datasets      -> loading hosted forget/retain corpora instead of the
+#                    bundled JSON files
+#   einops        -> readable tensor reshaping in the locator
+#   accelerate    -> multi-GPU ablation for models that don't fit one node
+#
+#   pip install lm-eval datasets einops accelerate
+# ---------------------------------------------------------------------------
