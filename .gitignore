@@ -1,0 +1,43 @@
+# --- Model weights & checkpoints (NEVER commit; they are huge) ---
+model_base/
+model_poisoned/
+model_cleansed/
+checkpoints/
+outputs/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.model
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Environment / secrets ---
+.env
+.env.*
+
+# --- Logs / data dumps ---
+*.log
+wandb/
+runs/
+*.npy
+*.npz
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
